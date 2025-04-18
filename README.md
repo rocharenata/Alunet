@@ -4,9 +4,6 @@
 
 O App de Conexão entre Pais e Educadores tem como objetivo fortalecer a comunicação entre família e escola, permitindo que pais e responsáveis acompanhem de perto o desempenho acadêmico, comportamento e rotina escolar de seus filhos. A plataforma facilita o diálogo com professores e educadores, promovendo um ambiente mais colaborativo para o desenvolvimento das crianças.
 
-![ALUNET](https://github.com/user-attachments/assets/b26c5b67-3d5e-4b38-97ea-d0beb4e079b1)
-
-
 
 🚀 Funcionalidades Principais
 
