@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Handle button click
     }
 
-    text.view.setText(new SpannableString("ALU NET"));
+    private void setStatusBarColor(int color) {
+        // Set the status bar color
+        getWindow().setStatusBarColor(color);
     }
 }
