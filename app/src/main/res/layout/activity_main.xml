@@ -42,7 +42,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="70px"
         android:layout_marginRight="14dp"
         android:layout_marginBottom="8dp"
         android:fontFamily=""
@@ -58,11 +57,12 @@
         android:layout_marginLeft="14dp"
         android:layout_marginRight="14dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="-16"
         android:layout_weight="400dp"
-        android:fontFamily=""
+        android:textColor="#2B2B2B"
         android:text="Insira suas informações abaixo"
         android:textAlignment="center"
-        android:textSize="15dp" />
+        android:textSize="12dp" />
 
 
     <FrameLayout
@@ -70,9 +70,9 @@
         android:layout_width="300dp"
         android:layout_height="56dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="20dp">
 
-
+    /* Campo de Email */
         <View
             android:id="@+id/emailBackground"
             android:layout_width="match_parent"
@@ -100,16 +100,16 @@
         android:layout_width="300dp"
         android:layout_height="56dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="20dp">
 
-
+        /* Background do campo de senha */
         <View
             android:id="@+id/passwordBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/rounded_background" />
 
-
+        /* Campo de senha */
         <TextView
             android:id="@+id/passwordLabel"
             android:layout_width="302dp"
@@ -123,26 +123,32 @@
             android:textSize="10sp" />
     </FrameLayout>
 
+
+    /* Campo de Esqueci minha senha */
     <TextView
         android:id="@+id/passwordLabel"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="50dp"
         android:gravity="left|center"
         android:text="Esqueceu a senha?"
         android:textColor="#000"
         android:textSize="16sp" />
 
-    <View
+
+    /* Button de Acessar */
+    <Button
         android:layout_width="300dp"
         android:layout_height="56dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
-        android:background="#E63946" />
+        android:background="@drawable/rounded_button_background"
+        />
 
+    /* Texto do botão "Acessar" */
     <TextView
         android:id="@+id/passwordLabel"
         android:layout_width="158dp"
