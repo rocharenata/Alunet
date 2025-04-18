@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB"
+    android:backgroundTint="#FBFBFB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- ALUNET-->
+    <TextView
+        android:id="@+id/alunetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="14dp"
+        android:text="@string/alunet_text"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/alunetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="0px"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily=""
+        android:text="Educação"
+        android:textAlignment="center"
+        android:textSize="22dp" />
+
+
+    <TextView
+        android:id="@+id/alunetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="70px"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily=""
+        android:text="Acesse o portal"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:id="@+id/alunetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="400dp"
+        android:fontFamily=""
+        android:text="Insira suas informações abaixo"
+        android:textAlignment="center"
+        android:textSize="15dp" />
+
+
+    <FrameLayout
+        android:id="@+id/emailContainer"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp">
+
+
+        <View
+            android:id="@+id/emailBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background" />
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="302dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|center"
+            android:layout_marginTop="-15dp"
+            android:text="E-mail:"
+            android:textColor="#000"
+            android:textSize="10sp"
+
+            />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/passwordContainer"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp">
+
+
+        <View
+            android:id="@+id/passwordBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background" />
+
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="302dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|center"
+            android:layout_marginTop="-15dp"
+            android:text="Senha:"
+            android:textColor="#000"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="left|center"
+        android:text="Esqueceu a senha?"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="#D9D9D9"
+
+        />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginRight="50dp"
+        android:gravity="left|center"
+        android:text="Cadastre-se?"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

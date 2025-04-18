@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AluNet</string>
+    <string name="alunet_text">
+        <font color="#E63946">ALU</font><font color="#000000">NET</font>
+    </string>
+
+    </resources>
