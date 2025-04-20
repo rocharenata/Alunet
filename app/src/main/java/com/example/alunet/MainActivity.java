@@ -1,5 +1,4 @@
 package com.example.alunet;
-
 import android.os.Bundle;
 import android.view.View;
 
@@ -9,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.widget.EditText;
+import java.util.regex.Pattern; // Regex para validar e-mail
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         // Set the status bar color to transparent
         getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent, getTheme()));
+    }
+
+
+    // Método para validar o e-mail
+    private boolean isValidEmail(String email, String emailRegex) {
+        return Pattern.matches(emailRegex, email);
     }
 
     @Override
@@ -36,6 +42,18 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.main).setOnClickListener(v -> {
             String email = emailLabel.getText().toString();
             String password = passwordLabel.getText().toString();
+
+
+            // Validar o e-mail usando regex
+            String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+
+            if (isValidEmail(email, emailRegex)) {
+                // E-mail válido
+                emailLabel.setError(null);
+            } else {
+                // E-mail inválido
+                emailLabel.setError("E-mail inválido");
+            }
 
             // Aqui você pode fazer algo com o e-mail e a senha, como enviar para um servidor
         });
