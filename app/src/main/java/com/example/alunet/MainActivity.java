@@ -55,8 +55,25 @@ public class MainActivity extends AppCompatActivity {
                 emailLabel.setError("E-mail inválido");
             }
 
-            // Aqui você pode fazer algo com o e-mail e a senha, como enviar para um servidor
+            // Validar a senha usando regex
+            // A senha deve ter pelo menos 8 caracteres, incluindo letras e números
+
+            String passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
+
+            if (password.isEmpty()) {
+                passwordLabel.setError(null); // Campo vazio, limpa erro (ou exibe aviso se obrigatório)
+            } else if (Pattern.matches(passwordRegex, password)) {
+                passwordLabel.setError(null); // Senha válida
+            } else {
+                passwordLabel.setError("Senha inválida"); // Senha não atende aos critérios
+            }
+
+
+
         });
+
+
+
 
         // Configurar o listener para ajustar margens com as barras do sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
