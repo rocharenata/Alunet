@@ -1,16 +1,17 @@
 package com.example.alunet;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import android.widget.Button;
 import android.widget.EditText;
 import java.util.regex.Pattern; // Regex para validar e-mail
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private EditText emailLabel; // campo de e-mail
     private EditText passwordLabel; // campo de senha
@@ -38,27 +39,31 @@ public class MainActivity extends AppCompatActivity {
         emailLabel = findViewById(R.id.emailLabel);
         passwordLabel = findViewById(R.id.passwordLabel);
 
+        Button accessButton = findViewById(R.id.accessButton);
+
         //capturar texto inserido ao clicar em um botão
-        findViewById(R.id.main).setOnClickListener(v -> {
+        findViewById(R.id.accessButton).setOnClickListener(v -> {
             String email = emailLabel.getText().toString();
             String password = passwordLabel.getText().toString();
 
 
             // Validar o e-mail usando regex
-            String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+            String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+            // O e-mail deve ter pelo menos 8 caracteres, incluindo letras, números e um caractere especial
 
-            if (isValidEmail(email, emailRegex)) {
-                // E-mail válido
-                emailLabel.setError(null);
+            if (email.isEmpty()) {
+                emailLabel.setError(null); // Remove o erro se o campo estiver vazio
+            } else if (isValidEmail(email, emailRegex)) {
+                emailLabel.setError(null); // E-mail válido
             } else {
-                // E-mail inválido
-                emailLabel.setError("E-mail inválido");
+                emailLabel.setError("E-mail inválido"); // E-mail inválido
             }
 
             // Validar a senha usando regex
             // A senha deve ter pelo menos 8 caracteres, incluindo letras e números
 
-            String passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
+            String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{10,}$";
+            // A senha deve ter pelo menos 8 caracteres, incluindo letras, números e um caractere especial
 
             if (password.isEmpty()) {
                 passwordLabel.setError(null); // Campo vazio, limpa erro (ou exibe aviso se obrigatório)

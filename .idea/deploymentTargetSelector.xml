@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="Alunet">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-04-20T19:19:44.456414500Z">
+        <DropdownSelection timestamp="2025-04-20T22:16:58.632594Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Bruna\.android\avd\Pixel_3a_API_35.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=ZF523BWWBK" />
             </handle>
           </Target>
         </DropdownSelection>
