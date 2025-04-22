@@ -5,8 +5,12 @@
     </string>
 
     <string name="register_text">
-    <font color ="000000"> Ainda não tem acesso? </font> <font color="#E63946">Cadastre-se</font>
+    <font color="000000"> Ainda não tem acesso? </font>
 </string>
 
-    </resources>
+    <string name="register_text1">
+    <font color="#E63946">Cadastre-se</font>
+</string>
+
+</resources>
 

@@ -11,12 +11,15 @@
 
     <!-- ALUNET-->
     <TextView
-        android:id="@+id/alunetText"
+        android:id="@+id/alunet_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
+
         android:layout_marginTop="40dp"
         android:layout_marginRight="14dp"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.1"
         android:text="@string/alunet_text"
         android:textAlignment="center"
         android:textSize="70dp"
@@ -28,41 +31,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="14dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="monospace"
         android:text="Educação"
-        android:textColor="#2B2B2B"
         android:textAlignment="center"
-        android:textSize="22dp" />
+        android:textColor="#2B2B2B"
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
 
     <TextView
-        android:id="@+id/alunetText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily=""
-        android:textColor="#2B2B2B"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="monospace"
         android:text="Acesse o portal"
         android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#802B2B2B"
         android:textSize="30dp" />
 
-
     <TextView
-        android:id="@+id/alunetText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
+        android:layout_marginTop="-10dp"
         android:layout_marginRight="14dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="-10dp"
-        android:textColor="#2B2B2B"
+        android:fontFamily="monospace"
         android:text="Insira suas informações abaixo"
         android:textAlignment="center"
-        android:textSize="12dp" />
+        android:textColor="#802B2B2B"
+        android:textSize="14dp"
+        android:textStyle="bold" />
 
 
     <FrameLayout
@@ -72,7 +78,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp">
 
-    /* Campo de Email */
+    <!-- Campo de Email !-->
         <View
             android:id="@+id/emailBackground"
             android:layout_width="match_parent"
@@ -85,15 +91,14 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginLeft="0dp"
-            android:gravity="left|center"
             android:layout_marginTop="-0dp"
+            android:background="@null"
+            android:gravity="left|center"
             android:hint="E-mail:"
             android:textColor="#2B2B2B"
-            android:textSize="15sp"
-            android:background="@null"
-            />
+            android:textSize="15sp" />
 
-            />
+
     </FrameLayout>
 
 
@@ -104,14 +109,14 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp">
 
-        /* Background do campo de senha */
+        <!-- Background do campo de senha -->
         <View
             android:id="@+id/passwordBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/rounded_background" />
 
-        /* Campo de senha */
+        <!-- Campo de senha -->
         <EditText
             android:id="@+id/passwordLabel"
             android:layout_width="280dp"
@@ -127,45 +132,49 @@
     </FrameLayout>
 
 
-    /* Campo de Esqueci minha senha */
+    <!-- Campo de Esqueci minha senha -->
+
+
+    <!-- Button de Acessar -->
+
     <TextView
-        android:id="@+id/passwordLabel"
-        android:layout_width="158dp"
+        android:id="@+id/btRecuperarSenha"
+        android:layout_width="194dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="50dp"
-        android:gravity="left|center"
+        android:layout_marginRight="0dp"
         android:text="Esqueceu a senha?"
-        android:textColor="#000"
-        android:textSize="16sp" />
+        android:textAlignment="textEnd"
+        android:textColor="#8DF80202"
+        android:textSize="12sp" />
 
-
-    /* Button de Acessar */
     <TextView
+        android:id="@+id/btAcessar"
         android:layout_width="300dp"
         android:layout_height="56dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_background"
+        android:fontFamily="monospace"
+        android:gravity="center|left"
+        android:letterSpacing="0.3"
         android:text="Acessar"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textSize="25dp"
-        android:gravity="left|center"
-        android:background="@drawable/rounded_button_background"/>
-
+        android:typeface="normal" />
 
 
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="63dp"
-        android:layout_marginTop="70dp"
         android:layout_marginLeft="50dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:background="#FBFBFB"
         android:gravity="center"
-        android:background="#FBFBFB">
+        android:orientation="horizontal">
 
         <!-- Primeiro ícone -->
         <ImageView
@@ -190,13 +199,33 @@
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left|center"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/register_text" />
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="monospace"
+            android:gravity="left|center"
+            android:text="@string/register_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/btCadastre_se"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="monospace"
+            android:gravity="left|center"
+            android:text="@string/register_text1"
+            android:textAlignment="center" />
+    </LinearLayout>
 
 </LinearLayout>
 

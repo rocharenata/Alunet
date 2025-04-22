@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,114 @@
     android:layout_height="match_parent"
     tools:context=".Menu">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="121dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:textAlignment="center">
+
+            <ImageView
+                android:id="@+id/imagemLogo"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:layout_marginTop="10dp"
+                tools:src="@drawable/logo" />
+
+
+            <!-- Pesquisar como puxa o nome do usuario pra ca !-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="100dp"
+                android:text="Nome do Aluno"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btFaleComProf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="35dp"
+            android:text="Fale com o Professor"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btEventos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Eventos" />
+
+        <Button
+            android:id="@+id/btNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Notas"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btDisciplinas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Disciplinas"
+            android:textSize="12dp" />
+
+
+        <Button
+            android:id="@+id/btConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Configuração"
+            android:textSize="11dp" />
+
+        <Button
+            android:id="@+id/btLogAcessar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sair" />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:text="Bem vindos"
+            android:textAlignment="center"
+            android:textSize="60dp" />
+
+
+
+        <ViewAnimator
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

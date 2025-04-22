@@ -1,4 +1,7 @@
 package com.example.alunet;
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -7,13 +10,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
 import java.util.regex.Pattern; // Regex para validar e-mail
 
-public class MainActivity extends AppCompatActivity {
+
+
+
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btAcessar,btRecuperarSenha;
 
     private EditText emailLabel; // campo de e-mail
     private EditText passwordLabel; // campo de senha
+
+
 
     @Override
     protected void onResume() {
@@ -21,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         // Set the status bar color to transparent
         getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent, getTheme()));
     }
+
+
 
 
     // Método para validar o e-mail
@@ -37,6 +53,41 @@ public class MainActivity extends AppCompatActivity {
         // Inicializar os campos de e-mail e senha
         emailLabel = findViewById(R.id.emailLabel);
         passwordLabel = findViewById(R.id.passwordLabel);
+
+
+        // Botão para acessar
+        TextView btAcessar = findViewById(R.id.btAcessar);
+        btAcessar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Menu.class);
+                startActivity(intent);
+            }
+        });
+
+        // Botão para cadastrar
+        TextView btCadastre_se = findViewById(R.id.btCadastre_se);
+        btCadastre_se.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Cadastre_se.class);
+                startActivity(intent);
+            }
+        });
+
+        // Botão para Recuperar Senha
+        TextView btRecuperarSenha = findViewById(R.id.btRecuperarSenha);
+        btRecuperarSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecuperarSenha.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
 
         //capturar texto inserido ao clicar em um botão
         findViewById(R.id.main).setOnClickListener(v -> {
@@ -81,5 +132,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
