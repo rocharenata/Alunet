@@ -28,9 +28,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="0dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="70dp"
         android:text="Educação"
         android:textColor="#2B2B2B"
         android:textAlignment="center"
@@ -93,7 +93,7 @@
             android:background="@null"
             />
 
-            />
+
     </FrameLayout>
 
 
@@ -127,11 +127,21 @@
     </FrameLayout>
 
 
-    /* Campo de Esqueci minha senha */
-    <TextView
-        android:id="@+id/passwordLabel"
-        android:layout_width="158dp"
+    /* Button de Acessar */
+
+    <Button
+        android:id="@+id/accessButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Acessar"
+        android:layout_gravity="center"/>
+
+    /* Campo de Esqueci minha senha */
+
+    <TextView
+        android:id="@+id/forgotPasswordText"
+        android:layout_width="158dp"
+        android:layout_height="18dp"
         android:layout_gravity="center"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="5dp"
@@ -142,22 +152,7 @@
         android:textSize="16sp" />
 
 
-    /* Button de Acessar */
-    <Button
-        android:id="@+id/accessButton"
-        android:layout_width="300dp"
-        android:layout_height="56dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Acessar"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:gravity="left|center"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@drawable/rounded_button_background"/>
+
 
 
 
